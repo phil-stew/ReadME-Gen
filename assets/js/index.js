@@ -5,7 +5,18 @@ const util = require('util');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+
+function renderLicenseBadge(license) { if (license !=="none"){
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+    
+}
+return ""
+}
+
+
+
+
+
 const writeReadMe = () => {
     return inquirer.prompt([
     {
@@ -14,6 +25,12 @@ const writeReadMe = () => {
         name: 'uname',
     },
     {
+        type: 'checkbox',
+        message: 'What liecence would you like to use?',
+        name: 'license',
+        choices: ['vim-mode', 'android-studio',]
+    },
+    { 
         type: 'input',
         message: 'What is the name of your project?',
         name: 'projectname',
@@ -57,19 +74,27 @@ const writeReadMe = () => {
 };
 
 const genReadMe = (response) => 
-`This is a ReadME for ${response.uname} application created by ${response.projectname}
 
-Description:
-${response.description}
+`
+##License
+${renderLicenseBadge(response.license)}
 
+This is a ReadME for ${response.uname} application created by ${response.projectname}
 
+- [Description](#Description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Questions:](#Questions:)
+- [Questions:](#Questions:
 - [Contributing](#Contributing)
 - [Tests](#Tests)
+
+
+##Description:
+${response.description}
+
+
 
 ##Installation:
 ${response.install}
