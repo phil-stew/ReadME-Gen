@@ -11,8 +11,8 @@ there is a catch to stop errors from happennig however
 somthing should still populate in the readme 
 
 this is my video running the appliaction:
-![Phill Video](./assets/img/runapp)
+![Phill Video](./assets/img/video.mov)
 
 picture of the app in action 
 ![App Pic](./assets/img/readmepic.png)
-![App pic with inputs](./assets/img/readmerun.png)
+![App Pic with inputs](./assets/img/readmerun.png)

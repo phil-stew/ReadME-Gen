@@ -99,17 +99,22 @@ ${response.description}
 ##Installation:
 ${response.install}
 
+
+
 ##Usage: 
 ${response.usage}
+
 
 ##Contributing: 
 ${response.contributors}
 
+
 ##Tests:
 ${response.test}
 
+
+
 ##Questions:
- 
 Feel free to get more infomation by contacting me on github or email
 
 GitHub: ${response.github}    Email: ${response.email}
